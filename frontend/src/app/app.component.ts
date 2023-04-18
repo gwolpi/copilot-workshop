@@ -1,21 +1,6 @@
-import {Component, computed, inject, OnInit, signal, Signal, WritableSignal} from '@angular/core';
+import {Component, computed, inject, signal} from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {LicencePlateService} from "./licence-plate/licence-plate.service";
-
-// create a new validator function for reactive forms
-export function licencePlateValidator(control: string) {
-  // licence place needs to be 6 characters long, and only contain alphanumeric characters
-  // there always needs to be at least two numbers
-  const regex = /^[a-zA-Z0-9]{6}$/;
-  const regex2 = /[0-9]{2}/;
-  if (regex.test(control) && regex2.test(control)) {
-    return null;
-  }
-
-  return {licencePlate: true};
-}
-
-
+import {LicencePlateService} from "./licence-plate.service";
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleMagician", "VehicleMagician\VehicleMagician.csproj", "{15D139A3-9EB0-40AC-A137-128D07A3DC13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleMagician.tests", "VehicleMagician.tests\VehicleMagician.tests.csproj", "{9E0E24D3-9498-4D1F-B409-0B0FC6D26753}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15D139A3-9EB0-40AC-A137-128D07A3DC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D139A3-9EB0-40AC-A137-128D07A3DC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D139A3-9EB0-40AC-A137-128D07A3DC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D139A3-9EB0-40AC-A137-128D07A3DC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0E24D3-9498-4D1F-B409-0B0FC6D26753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0E24D3-9498-4D1F-B409-0B0FC6D26753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0E24D3-9498-4D1F-B409-0B0FC6D26753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0E24D3-9498-4D1F-B409-0B0FC6D26753}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

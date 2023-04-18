@@ -16,11 +16,7 @@
             }
             VehicleDto vehicleDto = new VehicleDto
             {
-            Merk = vehicle.merk, //todo leave this one add the rest
-            Kentekenplaat = vehicle.kentekenplaat,
-            Brandstof = vehicle.brandstof[0].brandstof_omschrijving,
-            Kleur = vehicle.eerste_kleur,
-            VervaldatumApk = vehicle.vervaldatum_apk
+            Merk = vehicle.merk,
             };
             return vehicleDto;
 

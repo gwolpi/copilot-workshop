@@ -38,31 +38,7 @@ namespace VehicleMagician.Controllers
         [ProducesResponseType(typeof(VehicleDto), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get(string licensePlate)
         {
-            //validate license plate
-            string message;
-            if (!LicensePlateValidator.IsValid(licensePlate))
-            {
-                message = $"Invalid license plate: {licensePlate}";
-                _logger.LogError(message);
-                return BadRequest(message);
-            }
 
-            var apiUrl = $"{BaseUrl}/{licensePlate}";
-            var request = new HttpRequestMessage(HttpMethod.Get, apiUrl);
-            request.Headers.Add("ovio-api-key", key);
-            var response = await _httpClient.SendAsync(request);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var content = await response.Content.ReadAsStringAsync();
-                var vehicle = JsonSerializer.Deserialize<Vehicle>(content);
-                //convert vehicle to DTO
-                return Ok(VehicleDto.CreateDto(vehicle));
-
-            }
-
-            message = $"Error fetching vehicle data for license plate: {licensePlate}";
-            _logger.LogError(message);
             return BadRequest();
         }
     }

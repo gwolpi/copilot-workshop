@@ -3,7 +3,6 @@ import {ChangeDetectionStrategy, Component, Input, Signal} from '@angular/core';
 @Component({
   selector: 'app-licence-plate',
   templateUrl: './licence-plate.component.html',
-  styleUrls: ['./licence-plate.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LicencePlateComponent {

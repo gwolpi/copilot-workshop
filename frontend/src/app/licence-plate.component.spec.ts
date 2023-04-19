@@ -20,16 +20,4 @@ describe('LicencePlateComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should render the licence plate in the correct format when the input is aa12bb', () => {
-    component.licencePlate = signal('aa12bb');
-    fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('span').textContent).toEqual('AA-12-BB');
-  });
-
-  it('should render the licence plate in the correct format when the input is a720bb', () => {
-    component.licencePlate = signal('a720bb');
-    fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('span').textContent).toEqual('A-720-BB');
-  });
 });

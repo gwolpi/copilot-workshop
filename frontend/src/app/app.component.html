@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="p-3 flex flex-col gap-2 max-w-sm mx-auto mt-4">
+  <input
+    formControlName="licencePlate"
+    class="border border-gray-300 rounded-md p-2 w-full" />
+  <button type="submit" class="bg-blue-500 text-white p-2 rounded-md">
+    Submit
+  </button>
+</form>
+
+<app-licence-plate [licencePlate]="licencePlate"></app-licence-plate>
+
+<div *ngIf="carDetails()" class="m-3">
+    <div class="px-4 sm:px-0">
+      <h3 class="text-base font-semibold leading-7 text-gray-900">Car Details</h3>
+    </div>
+    <div class="mt-6 border-t border-gray-100">
+      <dl class="divide-y divide-gray-100">
+        <div *ngFor="let prop of carDetailsProperties()" class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt class="text-sm font-medium leading-6 text-gray-900"> {{ prop | readableProperty }} </dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"> {{ carDetails()[prop] }} </dd>
+        </div>
+      </dl>
+    </div>
+</div>
